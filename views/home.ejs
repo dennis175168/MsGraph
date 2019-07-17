@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Node.js PowerBI Embed</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid fill">
+    <h1>Home</h1>
+
+    <div class="form-group"></div>
+        <label>cliend_id:</label>
+        <input id="cliend_id" class="form-control" type="text" value="539db59f-53ea-4a24-bf4f-85f57128fb13" /><br />
+        response_type:
+        <input id="response_type" class="form-control" type="text" value="code" /><br />
+        redirect_uri:
+        <input id="redirect_uri" class="form-control" type="text" value="http://localhost:3000/authcode"/><br />
+        response_mode:
+        <input id="response_mode" class="form-control" type="text" value="query" /><br />
+        scope:
+        <input id="scope" type="text" class="form-control" value="offline_access%20user.read" /><br />
+        state:
+        <input id="state" type="text" class="form-control" value="12345" /><br />
+
+        <button type="button" class="btn btn-primary" onclick="log()">Get Permission Code</button>
+    </div>
+
+    <!-- <a href="https://login.microsoftonline.com/ba3f5887-37f9-46a8-8273-dd0d2cb7789f/oauth2/v2.0/authorize?client_id=539db59f-53ea-4a24-bf4f-85f57128fb13&response_type=code&redirect_uri=http://localhost:3000/authcode&response_mode=query&scope=offline_access%20user.read&state=12345">
+        <button onclick="log()">Login</button>
+    </a> -->
+    
+    
+  </div>
+ 
+
+  <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script>
+      function log(){
+          var cliend_id = document.getElementById("cliend_id").value ;
+          var response_type = document.getElementById("response_type").value ;
+          var redirect_uri = document.getElementById("redirect_uri").value ;
+          var response_mode = document.getElementById("response_mode").value ;
+          var scope = document.getElementById("scope").value ;
+          var state = document.getElementById("state").value ;
+          window.location.href = "https://login.microsoftonline.com/ba3f5887-37f9-46a8-8273-dd0d2cb7789f/oauth2/v2.0/authorize?client_id="+cliend_id+"&response_type="+response_type+"&redirect_uri="+redirect_uri+"&response_mode="+response_mode+"&scope="+scope+"&state="+state+"";
+      }
+  </script>
+</body>
+
+</html>
+

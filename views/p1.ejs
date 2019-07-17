@@ -1,0 +1,34 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>MsGraphAPI</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <style>
+    
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid fill">
+    <h1>Get Code and Apply For Token</h1>
+    <h4><p id='token'></p></h4>
+
+    
+  </div>
+ 
+
+  <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script>
+      var json = '<%- token %>';
+      sessionStorage.setItem('token', json);
+      var data = sessionStorage.getItem('token');
+      console.log(data)
+      document.getElementById("token").innerHTML = data;
+  </script>
+</body>
+
+</html>
+
