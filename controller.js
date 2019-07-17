@@ -1,11 +1,11 @@
 var request = require('request');
 var parameter = {
-    'tanent_id' : 'ba3f5887-37f9-46a8-8273-dd0d2cb7789f',
-    'client_id': '539db59f-53ea-4a24-bf4f-85f57128fb13',
+    'tanent_id' : '',
+    'client_id': '',
     'scope' : 'user.read',
     'redirect_url' :'http://localhost:3000/authcode',
     'grant_type' : 'authorization_code',
-    'client_secret' : '8H0gMN*1zZAxZ@X2:dTnuM?zl[wfCQ1K'
+    'client_secret' : ''
 };
 
 
